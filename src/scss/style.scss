@@ -1,0 +1,620 @@
+@import "imports";
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  font-family: $font-Lato;
+  background: url("../img/header-fon.png") no-repeat bottom;
+  background-size: 100%;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373c3f;
+  }
+  &__nav-name {
+    font-family: $font-Montserrat;
+    color: white;
+    font-size: 12px;
+    padding-left: 18px;
+  }
+  &__nav-logo {
+    display: none;
+  }
+  &__drop-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 37px;
+    background-color: #202529;
+  }
+  &__drop-icon:focus {
+    outline: none;
+  }
+  &__drop-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    content: "\f0c9";
+  }
+  &__drop-content {
+    display: none;
+    font-size: 12px;
+    flex-direction: column;
+    position: absolute;
+    right:0;
+    top: 37px;
+  }
+  &__drop-content.active {
+    display: flex;
+  }
+  &__nav-item {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #444444;
+    width: 170px;
+    height: 29px;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+  }
+  &__nav-item:hover {
+    background-color: #f5f5f5;
+  }
+
+  &__main-title {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    width: 158px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 18px;
+    left: 0;
+    color: #fff;
+    line-height: 1.5
+  }
+  &__main-link {
+    padding-left: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: #A6D6E0;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 92px;
+  }
+}
+.services {
+  font-family: $font-Lato;
+  margin-top: 3px;
+  &__offers {
+    width: 100%;
+    align-items: flex-start;
+  }
+  &__offers-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+  }
+  &__link-text {
+    width: 88%;
+    text-align: center;
+  }
+  &__offers-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 75px;
+    background-color: $main-color;
+  }
+  &__offers-block::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 2px;
+    transform: rotate(44deg);
+    border-top: 1.5px solid white;
+    border-right: 1.5px solid white;
+    padding-bottom: 4px;
+    padding-left: 4px;
+      }
+
+  &__offers-img {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 3px;
+
+    &--delivery {
+      background: url("../img/pizza-delivery-fon.png") no-repeat left;
+      background-size: 100%;
+    }
+    &--salads {
+      background: url("../img/ua_ux-salads-fon.png") no-repeat left;
+      background-size: 100%;
+    }
+    &--desserts {
+      background: url("../img/desserts-fon.png") no-repeat left;
+      background-size: 100%;
+      margin-bottom: 22px;
+    }
+  }
+}
+.menu {
+  font-family: $font-Lato;
+&__logo {
+  display: none;
+}
+  &__title {
+    width: 100%;
+    font-size: 20px;
+    color: $text-color;
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    text-transform: none;
+    font-size: 10px;
+    color: #cbccce;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 3%;
+    padding-bottom: 7px;
+  }
+  &__title {
+    &--big {
+      text-align: center;
+    }
+    &--color {
+      box-sizing: border-box;
+      padding-left: 3%;
+      padding-top: 8px;
+      padding-bottom: 9px;
+      width: 100%;
+      background-color: $text-color;
+      color: $main-color;
+    }
+    &--color-hidden {
+      display: none;
+      box-sizing: border-box;
+      padding-left: 3%;
+      padding-top: 8px;
+      padding-bottom: 9px;
+      width: 100%;
+      background-color: $text-color;
+      color: $main-color;
+    }
+    &--light {
+      box-sizing: border-box;
+      padding-left: 3%;
+      padding-top: 8px;
+      padding-bottom: 9px;
+      width: 100%;
+      background-color: $main-color;
+      color: #fff;
+      margin-top: 26px;
+    }
+    &--smaller, &--glass, &--cup, &--beer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 13px;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    &--smaller::after {
+      font-family: "Font Awesome 5 Free";
+      font-size: 23px;
+      font-weight: 800;
+      color: $main-color;
+      content: "\f551";
+      margin-top: -5px;
+    }
+    &--glass {
+      padding-top: 5px;
+
+    }
+    &--glass::after {
+      content: "\f5ce";
+      font-family: "Font Awesome 5 Free";
+      font-size: 23px;
+      font-weight: 800;
+      color: $main-color;
+      margin-right: 8px;
+      margin-top: -2px;
+    }
+    &--cup::after {
+      content: "\f0f4";
+      font-family: "Font Awesome 5 Free";
+      font-size: 23px;
+      font-weight: 800;
+      color: $main-color;
+      margin-top: -5px;
+    }
+    &--beer {
+      padding-top: 4px;
+    }
+    &--beer::after {
+      content: "\f0fc";
+      font-family: "Font Awesome 5 Free";
+      font-size: 23px;
+      font-weight: 800;
+      color: $main-color;
+      margin-right: 8px;
+      margin-top: -2px;
+    }
+  }
+  &__item {
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+
+  }
+  &__wrapper-name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bolder;
+    color: $text-color;
+    margin-top: 12px;
+  }
+  &__flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__name {
+    padding-left: 5px;
+  }
+  &__name::before {
+    content: " ";
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: $text-color;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: -4px;
+
+  }
+  &__price::before {
+    content: "\0024";
+  }
+  &__subscribe {
+    font-size: 9.3px;
+  padding-top: 7px;
+  }
+}
+.footer {
+  width: 100%;
+  margin-top: 50px;
+  background-color: $main-color;
+  &__text {
+    margin: 0 auto;
+    width: 48%;
+    text-align: center;
+    color: #fff;
+    font-family: $font-Montserrat;
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 1.5;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .header {
+    &__nav-name {
+      font-size: 24px;
+    }
+
+    &__drop-icon {
+      width: 48px;
+      height: 45px;
+    }
+    &__drop-icon::before {
+      font-size: 22px;
+    }
+
+    &__drop-content {
+      font-size: 14px;
+      top: 44.5px;
+    }
+    &__nav-item {
+      padding-left: 20px;
+      width: 220px;
+      height: 43px;
+    }
+    &__main-title {
+      font-size: 36px;
+      width: 70%;
+    }
+
+    &__main-link {
+      font-size: 24px;
+      font-weight: bold;
+      padding-bottom: 150px;
+    }
+  }
+  .services {
+    &__offers-link {
+      font-size: 36px;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    &__link-text {
+      width: 88%;
+    }
+
+    &__offers-block {
+      height: 140px;
+      width: 140px;
+    }
+
+    &__offers-block::before {
+      width: 4px;
+      height: 4px;
+    }
+
+    &__offers-img {
+      height: 140px;
+      width: 100%;
+      &--desserts {
+        margin-bottom: 42px;
+      }
+    }
+  }
+  .menu {
+    &__title {
+      font-size: 40px;
+    }
+    &__subtitle{
+      font-size: 20px;
+      padding-top: 15px;
+      padding-bottom: 17px;
+    }
+    &__title {
+      &--color {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+      &--light {
+        background-color: $main-color;
+        color: #fff;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+      &--smaller, &--glass, &--cup, &--beer {
+        margin-top: 40px;
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+      &--smaller::after,
+      &--glass::after,
+      &--cup::after,
+      &--beer::after {
+        font-size: 30px;
+      }
+    }
+    &__item {
+      align-items: flex-start;
+      width: 90%;
+      margin: 0 auto;
+
+    }
+    &__wrapper-name {
+      font-size: 27px;
+      margin-top: 22px;
+    }
+    &__name::before {
+      width: 3px;
+      height: 3px;
+      margin-top: 11px;
+      margin-left: -8px;
+    }
+    &__subscribe {
+      width: 100%;
+      font-size: 17px;
+      padding-top: 28px;
+    }
+  }
+  .footer {
+    margin-top: 70px;
+    &__text {
+      font-size: 18px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+  }
+}
+
+@media screen and (min-width: 881px) {
+  .header {
+    background: url("../img/header-fon.png") no-repeat center;
+    background-size: cover;
+    &__nav {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      background-color: #373c3f;
+      height: 99px;
+    }
+    &__nav-name {
+      display: none;
+    }
+    &__nav-logo {
+      display: block;
+      padding-right: 20px;
+    }
+
+    &__drop-icon {
+      display: none;
+    }
+    &__drop-content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      right: initial;
+      top: initial;
+    }
+    &__nav-item {
+      font-family: $font-Montserrat;
+      width: initial;
+      height: initial;
+      text-transform: uppercase;
+      padding-left: 3.5%;
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      background: none;
+      border: none;
+    }
+    &__nav-item:hover {
+      background: none;
+    }
+    &__main-title {
+      padding-top: 60px;
+      font-size: 54px;
+      width: 70%;
+    }
+    &__main-link {
+      font-size: 34px;
+      font-weight: bold;
+      padding-top: 50px;
+      padding-bottom: 180px;
+    }
+  }
+  .services {
+    &__offers {
+    flex-direction: row;
+    justify-content: center;
+      align-items: flex-start;
+    }
+    &__offers-link {
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 38px;
+    }
+
+    &__offers-block {
+      display: none;
+    }
+
+    &__offers-img {
+      width: 33.3%;
+      height: 330px;
+    }
+  }
+  .menu {
+    &__flex-container {
+      width: 50%;
+    }
+    &__flex-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    &__list {
+      width: 96%;
+    }
+    &__item, &__item2 {
+      flex-basis: 50%;
+    }
+    &__title {
+      font-size: 40px;
+    }
+    &__subtitle{
+      margin-top: -50px;
+      padding-left: 5px;
+      margin-bottom: 25px;
+    }
+    &__menu-head {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__logo {
+      display: block;
+      margin-top: -10px;
+    }
+    &__flex-wrapper {
+      display: flex;
+    }
+    &__title {
+      &--big {
+       text-align: left;
+      }
+      &--color {
+        padding-top: 12px;
+        padding-bottom: 12px;;
+      }
+      &--color-hidden {
+        display: block;
+      }
+      &--light {
+        background-color: $main-color;
+        color: #fff;
+        margin-top: 0;
+      }
+      &--smaller, &--glass, &--cup, &--beer {
+        margin-top: 40px;
+        font-size: 20px;
+        margin-bottom: 30px;
+        margin-left: 5px;
+      }
+      &--smaller::after,
+      &--glass::after,
+      &--cup::after,
+      &--beer::after {
+        font-size: 30px;
+      }
+    }
+    &__item {
+      align-items: flex-start;
+      width: 90%;
+      margin: 0 auto;
+
+    }
+    &__wrapper-name {
+      font-size: 27px;
+      margin-top: 22px;
+      padding-left: 5px;
+    }
+    &__name::before {
+      width: 3px;
+      height: 3px;
+      margin-top: 11px;
+      margin-left: -8px;
+    }
+    &__subscribe {
+      width: 100%;
+      font-size: 17px;
+      padding-top: 28px;
+      padding-left: 5px;
+    }
+  }
+  .footer {
+    margin-top: 70px;
+    &__text {
+      width: 100%;
+      text-align: right;
+      font-size: 18px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+  }
+}
